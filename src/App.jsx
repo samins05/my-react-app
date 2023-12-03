@@ -5,17 +5,34 @@ function App() {
   const [count, setCount] = useState(0)
 
   const alert = () =>{
-    console.log('hi');
+    alert('hi');
   };
   return (
     <>
-      <div class='main'>Hello World</div>
-      <p class ='text'> apple pie is very yummy</p>
+      <div class='main'>C++ Learning Website</div>
+      <p > Welcome to our website! You can learn C++ by creating flashcards and solving practice problems! </p>
+      <LoginForm />
       <img src="/src/assets/boxingcat.gif"></img>
       <p>catch these hands</p>
-      <button onClick={alert}>click</button>
+      <a href="flashcards.html">Flashcards</a>
+      
     </>
   )
+}
+
+
+function LoginForm(){
+  return(
+    <form>
+        <label>Username</label>
+        <input type="text" name="uname" required/>
+        <br></br>
+        <label>Password</label>
+        <input type="password" name="pass" required/>
+        <br></br>
+        <input type="submit" name ="sub"></input>
+      </form>
+  );
 }
 
 
