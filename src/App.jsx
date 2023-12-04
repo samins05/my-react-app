@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Login from './Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,8 +16,8 @@ function App() {
     <>
     <body class="main">
       <Bar />
+      <signupForm />
       <p > Welcome to our website! You can learn C++ by creating flashcards and solving practice problems! </p>
-      <LoginForm />
       <img src="/src/assets/boxingcat.gif"></img>
       <p>catch these hands</p>
       </body>
@@ -35,18 +36,18 @@ function Bar() {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#flash">Flashcards</Nav.Link>
             <Nav.Link href="#quiz">Quiz</Nav.Link>
+            <Nav.Link href='/login.html'>Login</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-
-      <br />
+      <br></br>
     </>
   );
 }
-
-
-function LoginForm(){
+/*
+function signupForm(){
   return(
+    
     <form>
         <label>Username</label>
         <input type="text" name="uname" required/>
@@ -56,9 +57,27 @@ function LoginForm(){
         <br></br>
         <input type="submit" name ="sub"></input>
       </form>
+      <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text id="formtext">
+          sign up with your email to record your progress!
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
 }
-
-
+*/
 
 export default App
