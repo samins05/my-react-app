@@ -10,14 +10,25 @@ function Login() {
     const [password,setPassword] = useState('')
 
     function submit(event){
-        event.preventDefault(); //
-        axios.post('');
-    }
+        /*event.preventDefault(); //
+        axios.post('http://localhost:8081/login', {email,password})
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+        */
+        event.preventDefault(); // Prevent default form submission
+
+        axios.post('http://localhost:8081/login', { email, password })
+          .then(res => {
+            console.log(res.data);
+            // Handle the response or redirect to another page
+          })
+          .catch(err => console.log(err));
+      } 
 
     return( 
             
        <div id="login"> 
-        <Form onsubmit={submit}> 
+        <Form onSubmit={submit}> 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" onChange={e => setEmail(e.target.value)}/> 
