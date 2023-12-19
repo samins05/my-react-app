@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [data,setData] = useState([])
  useEffect(()=> {
-  fetch('http://localhost:8081/login')
+  fetch('http://localhost:8081/leaderboards')
   .then(res => res.json())
   .then(data => setData(data))
   .catch(err => console.log(err));
@@ -22,31 +22,27 @@ function App() {
     <>
     <body class="main">
       <Bar />
+      <h1 > Welcome to our website! You can learn C++ by creating flashcards and solving practice problems! </h1>
       <div style ={{padding: "50px"}}>
+      <h2>Leaderboards</h2>
     <table>
       <thead>
         <th>Username</th>
-        <th>Password</th>
+        <br></br>
         <th>Progress</th>
       </thead>
       <tbody>
         {data.map((d,i) => (
           <tr key={i}>
             <td>{d.username}</td>
-            <td>{d.password}</td>
             <td>{d.progress}</td>
             <td></td>
           </tr>
         ))}
       </tbody>
     </table>
-
-
+      <img src="/src/assets/coding.jpg"></img>
   </div>
-      <signupForm />
-      <p > Welcome to our website! You can learn C++ by creating flashcards and solving practice problems! </p>
-      <img src="/src/assets/boxingcat.gif"></img>
-      <p>catch these hands</p>
       </body>
     </>
   )
@@ -60,9 +56,9 @@ function Bar() {
         <Container>
           <Navbar.Brand>Learn C++!</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#flash">Flashcards</Nav.Link>
-            <Nav.Link href="#quiz">Quiz</Nav.Link>
+            <Nav.Link href="/index.html">Home</Nav.Link>
+            <Nav.Link href="/flash.html">Flashcards</Nav.Link>
+            <Nav.Link href="/learning.html">Learning</Nav.Link>
             <Nav.Link href='/login.html'>Login</Nav.Link>
           </Nav>
         </Container>
