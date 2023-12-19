@@ -14,7 +14,7 @@ const Flash = () => {
     {image: "./src/assets/applepie.jpg", title: "Flash3", texts: ["What does 5*2/3 output in C++?", "3"]},
     {image: "./src/assets/applepie.jpg", title: "Flash4", texts: ["How do you end a program after it runs in C++?", "return 0;"]},
   ];
-
+  
   const [currentIndex, setIndex] = useState(0);
   const [cardTexts, setTexts] = useState(cardInfo.map(card => card.texts[0]));
   
