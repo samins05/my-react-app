@@ -9,10 +9,10 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Flash = () => {
   const cardInfo = [
-    {image: "./src/assets/applepie.jpg", title: "Flash1", texts: ["How do you print Hello World in C++?", "cout << 'Hello World';"]},
-    {image: "./src/assets/applepie.jpg", title: "Flash2", texts: ["How do you code a for loop that goes to 10 in C++?", "for(int i=0;i<10;i++){body}"]},
-    {image: "./src/assets/applepie.jpg", title: "Flash3", texts: ["What does 5*2/3 output in C++?", "3"]},
-    {image: "./src/assets/applepie.jpg", title: "Flash4", texts: ["How do you end a program after it runs in C++?", "return 0;"]},
+    {image: "./src/assets/hello world.png", title: "Flash1", texts: ["How do you print Hello World in C++?", "cout << 'Hello World';"]},
+    {image: "./src/assets/forloop.png", title: "Flash2", texts: ["How do you code a for loop that goes to 10 in C++?", "for(int i=0;i<10;i++){body}"]},
+    {image: "./src/assets/math.jfif", title: "Flash3", texts: ["What does 5*2/3 output in C++?", "3"]},
+    {image: "./src/assets/theEnd.jfif", title: "Flash4", texts: ["How do you end a program after it runs in C++?", "return 0;"]},
   ];
   
   const [currentIndex, setIndex] = useState(0);
