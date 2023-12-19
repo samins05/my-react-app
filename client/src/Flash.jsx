@@ -6,12 +6,12 @@ import Card from 'react-bootstrap/Card';
 
 const Flash = () => {
   const cardInfo = [
-    {image: "./src/assets/applepie.jpg", title: "Flash1", texts: ["Question 1", "Answer 1"]},
-    {image: "./src/assets/applepie.jpg", title: "Flash2", texts: ["Question 2", "Answer 2"]},
-    {image: "./src/assets/applepie.jpg", title: "Flash3", texts: ["Question 3", "Answer 3"]},
-    {image: "./src/assets/applepie.jpg", title: "Flash4", texts: ["Question 4", "Answer 4"]},
+    {image: "./src/assets/applepie.jpg", title: "Flash1", texts: ["How do you print Hello World in C++?", "cout << 'Hello World';"]},
+    {image: "./src/assets/applepie.jpg", title: "Flash2", texts: ["How do you code a for loop that goes to 10 in C++?", "for(int i=0;i<10;i++){body}"]},
+    {image: "./src/assets/applepie.jpg", title: "Flash3", texts: ["What does 5*2/3 output in C++?", "3"]},
+    {image: "./src/assets/applepie.jpg", title: "Flash4", texts: ["How do you end a program after it runs in C++?", "return 0;"]},
   ];
-
+  
   const [currentIndex, setIndex] = useState(0);
   const [cardTexts, setTexts] = useState(cardInfo.map(card => card.texts[0]));
   
