@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 app.use(cors())
 
-const db = mysql.createConnection({
+const db = mysql.createConnection({ // create connection to local sql database 
     host: "localhost",
     user: 'root',
     password: '',
@@ -13,21 +13,18 @@ const db = mysql.createConnection({
 })
 
 
-app.get('/', (re,res)=>{
-    return res.json("From Backend Side");
+app.get('/', (re,res)=>{  // r
+    return res.json("backend");
 })
 
-app.get('/login', (req,res)=>{
-    const sql = "SELECT * FROM login"
+app.get('/leaderboards', (req,res)=>{ // return information from the local database 'leaderboards'
+    const sql = "SELECT * FROM leaderboards"
     db.query(sql, (err,data)=> {
         if(err) return res.json(err);
         return res.json(data);
     })
 })
 
-/* app.post('/crud', (req,res) =>{
-    const sql = "INSERT INTO login ('username', 'password',p) VALUES (?)"
-})*/
 
 app.listen(8081, ()=> {
     console.log("listening");
