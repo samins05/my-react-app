@@ -65,7 +65,6 @@ function Bar() {
             <Nav.Link href="/index.html">Home</Nav.Link>
             <Nav.Link href="/flash.html">Flashcards</Nav.Link>
             <Nav.Link href="/learning.html">Learning</Nav.Link>
-            <Nav.Link href='/login.html'>Login</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
