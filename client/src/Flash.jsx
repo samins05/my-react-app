@@ -18,8 +18,9 @@ const Flash = () => {
     {image: "./src/assets/string.jpg", title:"Initializing Variable", texts:["How would you initialize a string variable named hi to have the value 'Hello'?","string hi = 'Hello';"]}
   ];
   
-  const [currentIndex, setIndex] = useState(0);
-  const [cardTexts, setTexts] = useState(cardInfo.map(card => card.texts[0]));
+  const [currentIndex, setIndex] = useState(0); //hook for shuffling through flashcards
+  const [cardTexts, setTexts] = useState(cardInfo.map(card => card.texts[0])); //hook for displaying question/answer on card
+  
   
   const renderCard = (card, index) => {
     return(
@@ -36,14 +37,14 @@ const Flash = () => {
 
   const handleClick = (cardIndex) => { 
     setTexts(prevTexts => {
-      const newTexts = [...prevTexts];
-      newTexts[cardIndex] = newTexts[cardIndex] === cardInfo[cardIndex].texts[0] ? cardInfo[cardIndex].texts[1] : cardInfo[cardIndex].texts[0]
+      const newTexts = [...prevTexts]; //spread operator gets both question/answer from texts array
+      newTexts[cardIndex] = newTexts[cardIndex] === cardInfo[cardIndex].texts[0] ? cardInfo[cardIndex].texts[1] : cardInfo[cardIndex].texts[0] //ternary operator toggles question/answer of current card
       return newTexts;
     });
   };
 
   const randomCard = () => {
-    setIndex((prevIndex) => (Math.round((Math.random() * 100)) % cardInfo.length));
+    setIndex((prevIndex) => (Math.round((Math.random() * 100)) % cardInfo.length)); //select random card from array
     //console.log(Math.round((Math.random() * 100)) % cardInfo.length);
   };
 
