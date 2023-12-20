@@ -94,6 +94,35 @@ function CodingInfo() {
     i=3, i=4, and then at i=5 it is not less than 5, so the code cannot run, since 
     5 does not meet the condition of i<5. 
     `;
+    const arr=`
+    In terms of making lists in C++, you can make an array or a vector.
+    
+    An array has a locked size of the list
+    A vector does not a set size, and the size can be changed.
+    
+    To initialize an array,
+    put:
+    <var type> <arrayname>[sizeofArray];
+    you can set initialize an array with some set values, or you can set it to default values by not making it equal to anything.
+    
+    ex. 
+    int arr[3] = {1,2,3};
+
+    To initialize a vector,
+    put:
+    vector <var type(include the carrots here)> <vectorname>;
+    
+    ex.
+    vector<string> list = {"Hi","How","Are","You"};
+
+    to get a given item of a list,
+    you will use <list name>[<element number>];
+
+    The first item of any list has an index of 0, the second is 1, and so on.
+    for example, if we want to print the "Are" item from the vector list,
+    we will do:
+    cout << list[2];
+    `;
   return (
      <Accordion bg="dark" data-bs-theme="dark" defaultActiveKey="0">
       <Accordion.Item eventKey="0">
@@ -132,6 +161,16 @@ function CodingInfo() {
             <pre>
             <code>
                 {forloop}
+            </code>
+        </pre>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="4">
+        <Accordion.Header>Lists</Accordion.Header>
+        <Accordion.Body>
+            <pre>
+            <code>
+                {arr}
             </code>
         </pre>
         </Accordion.Body>

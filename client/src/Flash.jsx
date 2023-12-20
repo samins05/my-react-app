@@ -9,10 +9,13 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Flash = () => {
   const cardInfo = [
-    {image: "./src/assets/hello world.png", title: "Flash1", texts: ["How do you print Hello World in C++?", "cout << 'Hello World';"]},
-    {image: "./src/assets/forloop.png", title: "Flash2", texts: ["How do you code a for loop that goes to 10 in C++?", "for(int i=0;i<10;i++){body}"]},
-    {image: "./src/assets/math.jfif", title: "Flash3", texts: ["What does 5*2/3 output in C++?", "3"]},
-    {image: "./src/assets/theEnd.jfif", title: "Flash4", texts: ["How do you end a program after it runs in C++?", "return 0;"]},
+    {image: "./src/assets/hello world.png", title: "Hello World", texts: ["How do you print Hello World in C++?", "cout << 'Hello World';"]},
+    {image: "./src/assets/forloop.png", title: "For Loop", texts: ["How do you code a for loop that goes to 10 in C++?", "for(int i=0;i<10;i++){body}"]},
+    {image: "./src/assets/math.jfif", title: "Integers", texts: ["What does 5*2/3 output in C++?", "3"]},
+    {image: "./src/assets/theEnd.jfif", title: "End a Program", texts: ["How do you end a program after it runs in C++?", "return 0;"]},
+    {image: "./src/assets/array.png", title: "Arrays", texts: ["How can you initialize an array of integers that have values 1,2, and 5?","int arr[3]={1,2,5};"
+    ]},
+    {image: "./src/assets/string.jpg", title:"Initializing Variable", texts:["How would you initialize a string variable named hi to have the value 'Hello'?","string hi = 'Hello';"]}
   ];
   
   const [currentIndex, setIndex] = useState(0);
@@ -25,7 +28,7 @@ const Flash = () => {
       <Card.Body>
         <Card.Title>{card.title}</Card.Title>
         <Card.Text>{cardTexts[index]}</Card.Text>
-        <Button onClick={() => handleClick(index)}>Hello bro</Button>
+        <Button onClick={() => handleClick(index)}>Show Answer</Button>
       </Card.Body>
     </Card>
     );
